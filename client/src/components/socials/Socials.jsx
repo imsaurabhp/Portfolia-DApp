@@ -1,7 +1,7 @@
 import React from 'react'
-import LinkedIn from '../../assets/linkedin-app-icon.svg';
+import LinkedIn from '../../assets/linkedin-icon.png';
 import Github from "../../assets/github-mark-white.png";
-import Email from "../../assets/gmail-icon.svg";
+import Email from "../../assets/gmail-icon.png";
 import Resume from "../../assets/resume-icon.png";
 
 const Socials = () => {
@@ -24,9 +24,8 @@ const Socials = () => {
         }
       ];
     
-      const handleCardClick = (location) => {
-        // console.log(index)
-        window.location.href = location;
+      const handleSocialClick = (location) => {
+        window.open(location, '_blank');
       };
   return (
     <>
@@ -40,7 +39,7 @@ const Socials = () => {
 
                 <div className='flex flex-row gap-8'>
                     {socials.map((social, index) => (
-                        <div key={index} className="group relative overflow-hidden rounded-lg shadow-md cursor-pointer" onClick={()=>handleCardClick(social.redirectTo)} style={{ zIndex: 0 }}>
+                        <div key={index} className="group relative overflow-hidden rounded-lg shadow-md cursor-pointer" onClick={()=>handleSocialClick(social.redirectTo)} style={{ zIndex: 0 }}>
                             {/* {console.log(social.imageLocation)} */}
                             <div className='h-10 w-10 bg-cover bg-center sm:h-20 sm:w-20' style={{ backgroundImage: `url(${social.imageLocation})` }}></div>
                         </div>
