@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {FaBars, FaTimes, FaGithub, FaLinkedin, FaFacebook, FaTwitter} from 'react-icons/fa'
-import {HiOutlineMail} from 'react-icons/hi'
-import {BsFillPersonLinesFill} from 'react-icons/bs'
 import MetamaskIcon from '../../assets/metamask.svg';
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 import ABI from './ABI.json'
@@ -83,7 +81,6 @@ const Navbar = ({saveState}) => {
                     </div>
                 ) : null}
                 
-
             </div>
         </>
     );
